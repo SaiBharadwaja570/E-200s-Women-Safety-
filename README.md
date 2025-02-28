@@ -1,6 +1,6 @@
 # E-200s Women Safety App
 
-A comprehensive mobile application designed to enhance women's safety through real-time tracking, emergency alerts, and community support.
+A comprehensive web application designed to enhance women's safety through real-time tracking, emergency alerts, and community support.
 
 ## Features
 
