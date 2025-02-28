@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="sos-style.css">
 </head>
 <body>
-    <!-- Header -->
+
     <header class="header">
         <a href="#" class="logo">E-200s</a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -18,41 +18,103 @@
             <a href="#">Live Tracking</a>
             <a href="#">About</a>
             <a href="#">Safety Tips</a>
+            <a href="contacts.html">Contacts</a> 
             <a href="#">Contact Us</a>
         </nav>
     </header>
 
-    <!-- SOS Content -->
     <section class="sos-section">
+        <!-- Update Section (Top-Left) -->
+        <div class="update-section">
+            <h2>Update Emergency Contacts</h2>
+            <a href="#" class="update-link" id="update-link">Update Now</a>
+        </div>
+
+        <!-- SOS Button (Center) -->
         <div class="sos-content">
-            <h2>Update Your Emergency Contacts and Message</h2>
-            <br><br>
-            <a href="#" class="update-link">Update Now</a>
-            <br><br>
             <button class="sos-button" id="sos-button">
                 <i class='bx bx-alarm'></i> SOS
             </button>
         </div>
     </section>
 
-    <!-- Script for SOS Button Interaction -->
+    <!-- Update Modal -->
+    <div class="modal" id="update-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Update Emergency Details</h2>
+            <form id="emergency-form">
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="Enter phone number" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your emergency message" required></textarea>
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script for SOS Button Interaction and Update Functionality -->
     <script>
+        // Open Update Modal
+        const updateLink = document.getElementById('update-link');
+        const updateModal = document.getElementById('update-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        updateLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            updateModal.style.display = 'none';
+        });
+
+        // Save Emergency Details to Local Storage
+        const emergencyForm = document.getElementById('emergency-form');
+        emergencyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const phoneNumber = document.getElementById('phone-number').value;
+            const message = document.getElementById('message').value;
+
+            // Save to Local Storage
+            localStorage.setItem('emergencyPhoneNumber', phoneNumber);
+            localStorage.setItem('emergencyMessage', message);
+
+            alert('Emergency details saved successfully!');
+            updateModal.style.display = 'none';
+        });
+
+        // Load Saved Emergency Details (Optional: Display on page load)
+        window.addEventListener('load', () => {
+            const savedPhoneNumber = localStorage.getItem('emergencyPhoneNumber');
+            const savedMessage = localStorage.getItem('emergencyMessage');
+
+            if (savedPhoneNumber || savedMessage) {
+                console.log('Saved Phone Number:', savedPhoneNumber);
+                console.log('Saved Message:', savedMessage);
+            }
+        });
+
+        // SOS Button Interaction
         const sosButton = document.getElementById('sos-button');
 
         sosButton.addEventListener('mousedown', () => {
-            sosButton.style.backgroundColor = '#ff4444'; // Change color when held
+            sosButton.style.backgroundColor = '#ff4444';
         });
 
         sosButton.addEventListener('mouseup', () => {
-            sosButton.style.backgroundColor = '#ff0000'; // Revert color when released
+            sosButton.style.backgroundColor = '#ff0000';
         });
 
         sosButton.addEventListener('touchstart', () => {
-            sosButton.style.backgroundColor = '#ff4444'; // Change color for touch devices
+            sosButton.style.backgroundColor = '#ff4444';
         });
 
         sosButton.addEventListener('touchend', () => {
-            sosButton.style.backgroundColor = '#ff0000'; // Revert color for touch devices
+            sosButton.style.backgroundColor = '#ff0000';
         });
     </script>
 </body>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contacts-style.css"> <!-- Use the same CSS file for consistency -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">E-200s</a> <!-- Link back to the main page -->
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a> <!-- Link back to the main page -->
+            <a href="#">Live Tracking</a>
+            <a href="#">About</a>
+            <a href="#">Safety Tips</a>
+            <a href="contacts.html" class="active">Contacts</a> <!-- Active link for Contacts -->
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section">
+        <h2>Emergency Contacts</h2>
+        <table id="emergency-contacts-table">
+            <thead>
+                <tr>
+                    <th>Phone Number</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here using JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Script to Load Data from Local Storage -->
+    <script>
+        // Function to load emergency contacts from localStorage
+        function loadEmergencyContacts() {
+            const phoneNumber = localStorage.getItem('emergencyPhoneNumber');
+            const message = localStorage.getItem('emergencyMessage');
+
+            const tableBody = document.querySelector('#emergency-contacts-table tbody');
+
+            if (phoneNumber || message) {
+                // Create a new row for the data
+                const row = document.createElement('tr');
+
+                // Add phone number cell
+                const phoneCell = document.createElement('td');
+                phoneCell.textContent = phoneNumber || 'N/A';
+                row.appendChild(phoneCell);
+
+                // Add message cell
+                const messageCell = document.createElement('td');
+                messageCell.textContent = message || 'N/A';
+                row.appendChild(messageCell);
+
+                // Append the row to the table
+                tableBody.appendChild(row);
+            } else {
+                // If no data is found, display a message
+                const row = document.createElement('tr');
+                const messageCell = document.createElement('td');
+                messageCell.setAttribute('colspan', '2');
+                messageCell.textContent = 'No emergency contacts found.';
+                row.appendChild(messageCell);
+                tableBody.appendChild(row);
+            }
+        }
+
+        // Load data when the page loads
+        window.addEventListener('load', loadEmergencyContacts);
+    </script>
+</body>
+</html>
