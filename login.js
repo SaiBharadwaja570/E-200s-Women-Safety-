@@ -35,8 +35,5 @@ import { getAuth,GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.
   sub.addEventListener('click',function(){
     window.location.href="main-page.html"
   })
-  const sub2 = document.getElementById("login");
-  sub2.addEventListener('click',function(){
-    window.location.href="sos-page.html"
-  })
+   
  
