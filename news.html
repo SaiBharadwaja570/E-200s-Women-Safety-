@@ -3,29 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-    src="https://kit.fontawesome.com/2dfb895f73.js"
-    crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/2dfb895f73.js" crossorigin="anonymous"></script>
     <title>News</title>
     <style>
-      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      .home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .home-button:hover {
+        background-color: #555;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .news {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .news-btn {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .news-btn button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .news-btn button:hover {
+        background-color: #42a5f5;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .news1 {
+        display: flex;
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .news-image {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      .news-details {
+        flex: 1;
+      }
+
+      .news-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .news-date {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      .news-description {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .news {
+          width: 100%;
+          padding: 10px;
+        }
+
+        .news-btn button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        .news1 {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .news-image {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+
+        .news-title {
+          font-size: 18px;
+        }
+
+        .news-date,
+        .news-description {
+          font-size: 14px;
+        }
+
+        .home-button {
+          font-size: 16px;
+          padding: 8px 16px;
+        }
+      }
     </style>
     <link rel="stylesheet" href="news.css" />
     <!-- Link to custom CSS file -->
   </head>
   <body>
-    
-    
+    <a href="empower.html" class="home-button">Home</a>
     <section class="news">
       <div id="news-container"></div>
       <div class="news-btn">
         <button onclick="loadMoreNews()">See More</button>
       </div>
     </section>
-    
-   
-    
     <script>
       const apiKey = "12e417835ffb02577c845853f3015e7f";
       const apiUrl = `https://gnews.io/api/v4/search?q=crime%20against%20women&lang=en&token=${apiKey}`;
