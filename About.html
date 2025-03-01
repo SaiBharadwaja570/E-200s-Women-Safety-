@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;  
+            background-color: rgb(0, 0, 0);  
             margin: 0;
             padding: 20px;
             display: flex;
@@ -36,8 +36,8 @@
         h1 {
             font-size: 48px;
             font-weight: bold;
-            color: #ff1493;  
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            color: #ff1493; /* Pink color */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Shadow effect */
             margin: 0;
             animation: fadeIn 1.5s ease-in-out;
             text-align: center;
@@ -60,6 +60,11 @@
             text-align: justify;
         }
 
+        mark {
+            background: linear-gradient(45deg, #f39cca, #00ffff, #85ff60, #00ffff  );
+            color: black; /* Text color */
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -79,7 +84,7 @@
         footer {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #e5e8f5;  
+            background-color: #000000;  
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             width: 100%;
@@ -99,38 +104,59 @@
             text-decoration: none;
         }
 
-        
+        /* Home Button Styles */
+        .home-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: #ff69b4;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="mainlogo.jpg" alt="Femisy Logo" class="logo">
         <h1>ABOUT US</h1>
+        
+        <a href="main-page.html" class="home-button">Home</a>
+        <a href="sos-page.html" class="home-button">Home</a>
     </header>
 
     <div class="content-box">
         <p>
-            Welcome to Femisy, your trusted platform dedicated to empowering women by prioritizing security, safety, and good health. At Femisy, we are committed to providing comprehensive support for women through various features tailored to enhance your well-being and security.
+            <mark>Welcome</mark> <mark>to</mark> <mark>Femisy,</mark> <mark>your</mark> <mark>trusted</mark> <mark>platform</mark> <mark>dedicated</mark> <mark>to</mark> <mark>empowering</mark> <mark>women</mark> <mark>by</mark> <mark>prioritizing</mark> <mark>security,</mark> <mark>safety,</mark> <mark>and</mark> <mark>good</mark> <mark>health.</mark> <mark>At</mark> <mark>Femisy,</mark> <mark>we</mark> <mark>are</mark> <mark>committed</mark> <mark>to</mark> <mark>providing</mark> <mark>comprehensive</mark> <mark>support</mark> <mark>for</mark> <mark>women</mark> <mark>through</mark> <mark>various</mark> <mark>features</mark> <mark>tailored</mark> <mark>to</mark> <mark>enhance</mark> <mark>your</mark> <mark>well-being</mark> <mark>and</mark> <mark>security.</mark>
         </p>
         <p>
-            Our health section offers valuable information on fitness, exercises, and nutrition, designed to help you achieve and maintain a healthy lifestyle. You can also track your menstrual cycle, share personal experiences, and engage in mood quizzes to better understand and manage your emotional well-being. Additionally, we provide a BMI calculator to help you stay on top of your health metrics.
+            <mark>Our</mark> <mark>health</mark> <mark>section</mark> <mark>offers</mark> <mark>valuable</mark> <mark>information</mark> <mark>on</mark> <mark>fitness,</mark> <mark>exercises,</mark> <mark>and</mark> <mark>nutrition,</mark> <mark>designed</mark> <mark>to</mark> <mark>help</mark> <mark>you</mark> <mark>achieve</mark> <mark>and</mark> <mark>maintain</mark> <mark>a</mark> <mark>healthy</mark> <mark>lifestyle.</mark> <mark>You</mark> <mark>can</mark> <mark>also</mark> <mark>track</mark> <mark>your</mark> <mark>menstrual</mark> <mark>cycle,</mark> <mark>share</mark> <mark>personal</mark> <mark>experiences,</mark> <mark>and</mark> <mark>engage</mark> <mark>in</mark> <mark>mood</mark> <mark>quizzes</mark> <mark>to</mark> <mark>better</mark> <mark>understand</mark> <mark>and</mark> <mark>manage</mark> <mark>your</mark> <mark>emotional</mark> <mark>well-being.</mark> <mark>Additionally,</mark> <mark>we</mark> <mark>provide</mark> <mark>a</mark> <mark>BMI</mark> <mark>calculator</mark> <mark>to</mark> <mark>help</mark> <mark>you</mark> <mark>stay</mark> <mark>on</mark> <mark>top</mark> <mark>of</mark> <mark>your</mark> <mark>health</mark> <mark>metrics.</mark>
         </p>
         <p>
-            In our Safety and Security section, you will find essential safety tips and resources to keep you informed and protected. Our map pathfinder feature helps you navigate the safest and shortest routes, while our news section keeps you updated on the latest information relevant to women's safety.
+            <mark>In</mark> <mark>our</mark> <mark>Safety</mark> <mark>and</mark> <mark>Security</mark> <mark>section,</mark> <mark>you</mark> <mark>will</mark> <mark>find</mark> <mark>essential</mark> <mark>safety</mark> <mark>tips</mark> <mark>and</mark> <mark>resources</mark> <mark>to</mark> <mark>keep</mark> <mark>you</mark> <mark>informed</mark> <mark>and</mark> <mark>protected.</mark> <mark>Our</mark> <mark>map</mark> <mark>pathfinder</mark> <mark>feature</mark> <mark>helps</mark> <mark>you</mark> <mark>navigate</mark> <mark>the</mark> <mark>safest</mark> <mark>and</mark> <mark>shortest</mark> <mark>routes,</mark> <mark>while</mark> <mark>our</mark> <mark>news</mark> <mark>section</mark> <mark>keeps</mark> <mark>you</mark> <mark>updated</mark> <mark>on</mark> <mark>the</mark> <mark>latest</mark> <mark>information</mark> <mark>relevant</mark> <mark>to</mark> <mark>women's</mark> <mark>safety.</mark>
         </p>
         <p>
-            Femisy also fosters community and connection through our chat section, where you can engage in conversations with others or interact with our chatbot for quick assistance and support.
+            <mark>Femisy</mark> <mark>also</mark> <mark>fosters</mark> <mark>community</mark> <mark>and</mark> <mark>connection</mark> <mark>through</mark> <mark>our</mark> <mark>chat</mark> <mark>section,</mark> <mark>where</mark> <mark>you</mark> <mark>can</mark> <mark>engage</mark> <mark>in</mark> <mark>conversations</mark> <mark>with</mark> <mark>others</mark> <mark>or</mark> <mark>interact</mark> <mark>with</mark> <mark>our</mark> <mark>chatbot</mark> <mark>for</mark> <mark>quick</mark> <mark>assistance</mark> <mark>and</mark> <mark>support.</mark>
         </p>
         <p>
-            Our Virtual Skill Swap Platform allows you to exchange skills and services with other users. You can create and edit profiles, list the skills you are offering and seeking, and use our scheduling tool to book sessions for skill exchanges. After each session, you can leave ratings and reviews to help build trust within the community. Join our community forums to discuss, share tips, and ask questions related to skill swapping and other relevant topics.
+            <mark>Our</mark> <mark>Virtual</mark> <mark>Skill</mark> <mark>Swap</mark> <mark>Platform</mark> <mark>allows</mark> <mark>you</mark> <mark>to</mark> <mark>exchange</mark> <mark>skills</mark> <mark>and</mark> <mark>services</mark> <mark>with</mark> <mark>other</mark> <mark>users.</mark> <mark>You</mark> <mark>can</mark> <mark>create</mark> <mark>and</mark> <mark>edit</mark> <mark>profiles,</mark> <mark>list</mark> <mark>the</mark> <mark>skills</mark> <mark>you</mark> <mark>are</mark> <mark>offering</mark> <mark>and</mark> <mark>seeking,</mark> <mark>and</mark> <mark>use</mark> <mark>our</mark> <mark>scheduling</mark> <mark>tool</mark> <mark>to</mark> <mark>book</mark> <mark>sessions</mark> <mark>for</mark> <mark>skill</mark> <mark>exchanges.</mark> <mark>After</mark> <mark>each</mark> <mark>session,</mark> <mark>you</mark> <mark>can</mark> <mark>leave</mark> <mark>ratings</mark> <mark>and</mark> <mark>reviews</mark> <mark>to</mark> <mark>help</mark> <mark>build</mark> <mark>trust</mark> <mark>within</mark> <mark>the</mark> <mark>community.</mark> <mark>Join</mark> <mark>our</mark> <mark>community</mark> <mark>forums</mark> <mark>to</mark> <mark>discuss,</mark> <mark>share</mark> <mark>tips,</mark> <mark>and</mark> <mark>ask</mark> <mark>questions</mark> <mark>related</mark> <mark>to</mark> <mark>skill</mark> <mark>swapping</mark> <mark>and</mark> <mark>other</mark> <mark>relevant</mark> <mark>topics.</mark>
         </p>
         <p>
-            Join us at Femisy and be a part of a community that values your safety, health, and empowerment.
+            <mark>Join</mark> <mark>us</mark> <mark>at</mark> <mark>Femisy</mark> <mark>and</mark> <mark>be</mark> <mark>a</mark> <mark>part</mark> <mark>of</mark> <mark>a</mark> <mark>community</mark> <mark>that</mark> <mark>values</mark> <mark>your</mark> <mark>safety,</mark> <mark>health,</mark> <mark>and</mark> <mark>empowerment.</mark>
         </p>
     </div>
 
     <footer>
-        <p>Contact me at phone no: <a href="tel:7908837174">7908837174</a> or email: <a href=" kallalmukherje!@gmail.com">kallalmukherje1@gmail.com</a></p>
+        <p>Contact me at phone no: <a href="tel:7908837174">7908837174</a> or email: <a href="kallalmukherje1@gmail.com">kallalmukherje1@gmail.com</a></p>
     </footer>
 </body>
 </html>
