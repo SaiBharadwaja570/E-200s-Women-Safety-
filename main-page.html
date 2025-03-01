@@ -8,19 +8,107 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for Connect with Us section */
+        .connect-section {
+            padding: 50px 20px;
+            background-color: #292f3d;
+            text-align: center;
+        }
+
+        .connect-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .connect-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .connect-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .connect-buttons a {
+            text-decoration: none;
+            color: #090606;
+            background-color: #0ef;
+            padding: 20px 20px;
+            border-radius: 10px;
+            font-size: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .connect-buttons a:hover {
+            background-color: rgb(0, 176, 176);
+        }
+
+        .connect-section {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.connect-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff1493;
+}
+
+.connect-section p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.connect-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.connect-buttons a {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect-buttons a:hover {
+    background-color: #ff69b4;
+}
+
+.connect-buttons a i {
+    font-size: 20px;
+}
+    </style>
 </head>
-<body>
-    <!-- Header Design -->
+<body> 
+
     <header class="header">
-        <a href="#" class="logo"> E-200s </a>
+        <a href="#" class="logo">E-200s</a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="" class="active">Home</a>
-            <a href="">About</a>
-            <a href="">Safety Tips</a>
-            <a href="">Contact Us</a>
+            <a href="sos-page.html" class="active">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="empower.html">Safety & Security</a>
+            <a href="contacts.html">Contacts</a> 
+            <a href="#connect" class="contact-btn">Contact Us</a>
         </nav>
     </header>
+
     <section class="home" id="home">
         <div id="particles-js"></div>
         <div class="home-content">
@@ -44,118 +132,129 @@
         </div>
     </section>
 
+    <!-- Connect with Us Section -->
+    <section class="connect-section" id="connect">
+        <h2>Connect with Us</h2>
+        <p>We are here to help you! Reach out to us for any queries or support.</p>
+        <div class="connect-buttons">
+            <a href="mailto:support@e200s.com">Email Us</a>
+            <a href="tel:+1234567890">Call Us</a>
+            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-       particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 100,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": ["#0ef", "#ff0", "#f0f"]
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "",
-                "width": 100,
-                "height": 100
-            }
-        },
-        "opacity": {
-            "value": 0.7,
-            "random": true,
-            "anim": {
-                "enable": true,
-                "speed": 1.5,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 5,
-            "random": true,
-            "anim": {
-                "enable": true,
-                "speed": 2,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#0ef",
-            "opacity": 0.6,
-            "width": 2
-        },
-        "move": {
-            "enable": true,
-            "speed": 4,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "bounce",
-            "bounce": true,
-            "attract": {
-                "enable": true,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "bubble"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 200,
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#0ef", "#ff0", "#f0f"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1.5,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
                 "line_linked": {
-                    "opacity": 1
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#0ef",
+                    "opacity": 0.6,
+                    "width": 2
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "bounce",
+                    "bounce": true,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
                 }
             },
-            "bubble": {
-                "distance": 250,
-                "size": 10,
-                "duration": 2,
-                "opacity": 0.8,
-                "speed": 3
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 200,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 250,
+                        "size": 10,
+                        "duration": 2,
+                        "opacity": 0.8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 150,
+                        "duration": 0.5
+                    },
+                    "push": {
+                        "particles_nb": 6
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
             },
-            "repulse": {
-                "distance": 150,
-                "duration": 0.5
-            },
-            "push": {
-                "particles_nb": 6
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": true
-});
+            "retina_detect": true
+        });
     </script>
 </body>
 </html>
