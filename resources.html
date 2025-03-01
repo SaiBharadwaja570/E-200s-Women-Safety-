@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,65 +7,100 @@
     <link rel="stylesheet" href="w2styles.css" />
     <!-- Link to custom CSS file -->
     <style>
+      /* Home Button Styles */
+      .home-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 30px;
+        background-color: #6c5ce7;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        z-index: 1000; /* Ensure it's above other elements */
+      }
 
-h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 85px;
-    color:  #a1a92dd4;;
-  margin: 0;
-}
+      .home-button:hover {
+        background-color: #7c6ee7;
+        transform: scale(1.05);
+      }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 85px;
+        color: #a1a92dd4;
+        margin: 0;
+      }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-nav  a {
-  text-decoration: none;
-  color: #ecebeb;
-}
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
 
-main {
-  padding: 40px;
-}
+      nav a {
+        text-decoration: none;
+        color: #ecebeb;
+      }
 
-.resource {
-  background-color: #24d757;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+      main {
+        padding: 40px;
+      }
 
-.resource h3 {
-    color: #050505;
-    margin: 0;
-    text-decoration: solid;
-}
+      .resource {
+        background-color: #24d757;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
 
-.resource p {
-  margin: 10px 0;
-}
+      .resource h3 {
+        color: #050505;
+        margin: 0;
+        text-decoration: solid;
+      }
+
+      .resource p {
+        margin: 10px 0;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .home-button {
+          top: 10px;
+          right: 10px;
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
   <body>
-   
-    
+    <!-- Home Button -->
+    <a href="empower.html" class="home-button">Home</a>
+
+    <h1>Safe Path - Resources</h1>
+
     <main>
-        <div class="resource">
-          <h3>Women's Helpline Numbers</h3>
-          <p>
-            <a href="tel:1091">Women Helpline - 1091</a> - Emergency helpline number for women in distress in India.
-          </p>
-          <p>
-            <a href="tel:181">Women Helpline - 181</a> - Toll-free helpline number for women in need of assistance or facing violence.
-          </p>
-        </div>
+      <div class="resource">
+        <h3>Women's Helpline Numbers</h3>
+        <p>
+          <a href="tel:1091">Women Helpline - 1091 or 24x7 7827170170 </a> - Emergency helpline number for women in distress in India.
+        </p>
+        <p>
+          <a href="tel:181">Women Helpline - 181 or 24x7 helpline number 7827170170</a> - Toll-free helpline number for women in need of assistance or facing violence.
+        </p>
+      </div>
+
       <div class="resource">
         <h3>Crime Statistics India</h3>
         <p>
@@ -79,7 +114,6 @@ main {
           <a href="https://safecity.in/">Safecity</a> - Safecity is a platform that crowdmaps sexual harassment and abuse incidents in India and works towards making cities safer for women.
         </p>
       </div>
-
 
       <div class="resource">
         <h3>Self-Defense Training Centers</h3>
@@ -103,7 +137,5 @@ main {
         <p><strong>Phone:</strong> 181</p>
       </div>
     </main>
-
-    
   </body>
 </html>
