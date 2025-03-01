@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -73,6 +73,28 @@
             color: #333; /* Dark gray for the description */
         }
 
+        /* Home Button Styles */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background-color: #ed00ae;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000; /* Ensure it's above other elements */
+        }
+
+        .home-button:hover {
+            background-color: #63a906;
+            transform: scale(1.05);
+        }
+
         @media (max-width: 768px) {
             .tip-card {
                 width: 90%;
@@ -82,10 +104,20 @@
             header h1 {
                 font-size: 36px;
             }
+
+            .home-button {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
+     
+    <a href="empower.html" class="home-button">Home</a>
+
     <header>
         <h1>SAFETY TIPS</h1>
     </header>
