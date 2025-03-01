@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Signup2.css">
+    <script src="main.js" defer type="module"></script>
+</head>
+<body>
+
+    <div class="signup-container">
+        <form class="signup-form">
+            <h2>Sign Up</h2>
+            <p>Create your account</p>
+            
+            <input type="text" placeholder="Full Name" >
+            <input type="email" placeholder="Email Address" >
+            <input type="password" placeholder="Password" >
+            <input type="password" placeholder="Confirm Password">
+            
+            <button id="submit">Sign Up</button>
+            <button id="google-login-btn" class="google-button">
+                <img id="image" src="https://th.bing.com/th/id/OIP.DoYuESoRecI9l-vyqdrEnQHaE-?w=260&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Google Logo">
+                <span id="sign">Sign In With Google</span>
+            </button>
+
+            <p>Already have an account? <a href="safe.html">Login</a></p>
+        </form>
+    </div>
+
+</body>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".signup-form");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        const password = form.querySelector("input[type='password']:nth-child(3)").value;
+        const confirmPassword = form.querySelector("input[type='password']:nth-child(4)").value;
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+        } else {
+            alert("Sign up successful!");
+            form.submit(); 
+        }
+    });
+});
+</script>
+</html>
