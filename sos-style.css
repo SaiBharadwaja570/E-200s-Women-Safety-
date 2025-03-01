@@ -1,4 +1,4 @@
-/* General Styles */
+ /* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -270,4 +270,50 @@ body {
         height: 120px;
         font-size: 1.8rem;
     }
+}
+/* Connect with Us Section */
+.connect-section {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.connect-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff1493;
+}
+
+.connect-section p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.connect-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.connect-buttons a {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect-buttons a:hover {
+    background-color: #ff69b4;
+}
+
+.connect-buttons a i {
+    font-size: 20px;
 }
