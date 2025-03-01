@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
 import { getAuth,GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
  
   const firebaseConfig = {
@@ -33,10 +33,10 @@ import { getAuth,GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.
   })
   const sub = document.getElementById("submit");
   sub.addEventListener('click',function(){
-    window.location.href="logged.html"
+    window.location.href="main-page.html"
   })
   const sub2 = document.getElementById("login");
   sub2.addEventListener('click',function(){
-    window.location.href="logged.html"
+    window.location.href="sos-page.html"
   })
  
